@@ -37,6 +37,25 @@
 		}
 	}
 
+	body {
+		--bg-overlay: rgba(255, 255, 255, 0.55);
+		background-color: var(--color-global-bg);
+		background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("/background.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	html[data-theme="dark"] body {
+		--bg-overlay: rgba(0, 0, 0, 0.45);
+	}
+
+	@media (max-width: 768px) {
+		body {
+			background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("/background.png");
+		}
+	}
+
 	:target {
 		scroll-margin-block: 5ex;
 	}
