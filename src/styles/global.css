@@ -56,7 +56,7 @@
 
 	@media (max-width: 768px) {
 		html {
-			--bg-image: url("/background-mobile.png");
+			--bg-image: url("/Background-mobile.png");
 			background-attachment: scroll;
 		}
 	}
