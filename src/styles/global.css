@@ -51,10 +51,10 @@
 	}
 
 	@media (max-width: 768px) {
-		body {
-			background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("/background.png");
-		}
-	}
+    body {
+        background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("/background-mobile.png");
+    }
+}
 
 	:target {
 		scroll-margin-block: 5ex;
