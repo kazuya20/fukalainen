@@ -90,6 +90,9 @@ export default defineConfig({
 		},
 	},
 	vite: {
+		server: {
+			watch: process.platform === "win32" ? { usePolling: true, interval: 200 } : undefined,
+		},
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
