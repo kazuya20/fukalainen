@@ -30,25 +30,29 @@ const {
 			<slot />
 		</main>
 		<Footer />
-		<script is:inline type="speculationrules">
-			{
-				"prefetch": [
+		{
+			import.meta.env.PROD && (
+				<script is:inline type="speculationrules">
 					{
-						"where": {
-							"href_matches": "/*"
-						},
-						"eagerness": "immediate"
+						"prefetch": [
+							{
+								"where": {
+									"href_matches": "/*"
+								},
+								"eagerness": "immediate"
+							}
+						],
+						"prerender": [
+							{
+								"where": {
+									"href_matches": "/*"
+								},
+								"eagerness": "moderate"
+							}
+						]
 					}
-				],
-				"prerender": [
-					{
-						"where": {
-							"href_matches": "/*"
-						},
-						"eagerness": "moderate"
-					}
-				]
-			}
-		</script>
+				</script>
+			)
+		}
 	</body>
 </html>
